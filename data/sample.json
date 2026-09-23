@@ -1,0 +1,9 @@
+{
+  "event_id": "092108-005-sample-001",
+  "event_type": "ENTRY_ACCEPTED",
+  "aggregate_type": "candidate_entry",
+  "aggregate_id": "journalist_selection_review-001",
+  "occurred_at": "2026-09-20T18:00:00+08:00",
+  "version": 1,
+  "summary": "登记记者选拔回避与复核的首条领域记录"
+}
