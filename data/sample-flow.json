@@ -1,0 +1,74 @@
+[
+  {
+    "event_id": "evt-sample-001",
+    "event_type": "ENTRY_ACCEPTED",
+    "aggregate_type": "candidate_entry",
+    "aggregate_id": "entry-sample-1",
+    "occurred_at": "2026-09-01T09:00:00+08:00",
+    "version": 1,
+    "summary": "受理报名 entry-sample-1",
+    "candidate_ref": "cand-sample",
+    "qualification_version": 1,
+    "materials": {
+      "identity": { "name": "样例候选人" },
+      "work_samples": ["稿件甲", "稿件乙"]
+    }
+  },
+  {
+    "event_id": "evt-sample-002",
+    "event_type": "REVIEW_PACKAGE_GENERATED",
+    "aggregate_type": "candidate_entry",
+    "aggregate_id": "entry-sample-1",
+    "occurred_at": "2026-09-01T09:00:01+08:00",
+    "version": 2,
+    "summary": "生成资格版本 1 的脱敏评审包",
+    "package_id": "pkg-entry-sample-1-q1",
+    "qualification_version": 1,
+    "redacted_fields": ["identity"],
+    "package_hash": "样例哈希"
+  },
+  {
+    "event_id": "evt-sample-003",
+    "event_type": "RECUSAL_DECLARED",
+    "aggregate_type": "recusal_fact",
+    "aggregate_id": "recusal-sample-1",
+    "occurred_at": "2026-09-10T18:00:00+08:00",
+    "version": 1,
+    "summary": "申报回避：评委与候选人的合作关系",
+    "judge_id": "judge-sample",
+    "candidate_ref": "cand-sample",
+    "relation_type": "collaboration",
+    "valid_from": "2026-01-01T00:00:00+08:00",
+    "valid_to": null
+  },
+  {
+    "event_id": "evt-sample-004",
+    "event_type": "SCORE_SUBMITTED",
+    "aggregate_type": "score_sheet",
+    "aggregate_id": "sheet-sample-1",
+    "occurred_at": "2026-09-12T10:00:00+08:00",
+    "version": 1,
+    "summary": "评分 sheet-sample-1 提交并锁定（量表 rv-2026）",
+    "assignment_id": "assignment-sample-1",
+    "entry_id": "entry-sample-1",
+    "judge_id": "judge-sample",
+    "stage": "final",
+    "rubric_version": "rv-2026",
+    "criteria": [{ "name": "写作", "score": 85 }],
+    "evidence_refs": ["ev-sample-1"],
+    "content_hash": "样例内容哈希",
+    "sheet_version": 1
+  },
+  {
+    "event_id": "evt-sample-005",
+    "event_type": "SCORE_QUARANTINED",
+    "aggregate_type": "score_sheet",
+    "aggregate_id": "sheet-sample-1",
+    "occurred_at": "2026-09-15T09:30:00+08:00",
+    "version": 2,
+    "summary": "回避隔离评分 sheet-sample-1",
+    "conflict_id": "conflict-sample-1",
+    "recusal_id": "recusal-sample-1",
+    "reason": "recusal_confirmed"
+  }
+]

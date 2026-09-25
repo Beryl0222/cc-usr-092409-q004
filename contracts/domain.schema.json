@@ -20,9 +20,29 @@
       "type": "string",
       "enum": [
         "ENTRY_ACCEPTED",
+        "ENTRY_REVISED",
+        "REVIEW_PACKAGE_GENERATED",
         "RECUSAL_DECLARED",
-        "SCORE_SUBMITTED",
+        "CONFLICT_FLAGGED",
+        "CONFLICT_DISMISSED",
         "INCIDENT_CONFIRMED",
+        "ASSIGNMENT_PROPOSED",
+        "ASSIGNMENT_ACTIVATED",
+        "ASSIGNMENT_REPLACED",
+        "SCORE_SUBMITTED",
+        "SCORE_RESUBMISSION_REUSED",
+        "INVESTIGATION_OPENED",
+        "INVESTIGATION_RESOLVED",
+        "SCORE_QUARANTINED",
+        "STAGE_LIST_PUBLISHED",
+        "DECISION_APPENDED",
+        "APPEAL_OPENED",
+        "APPEAL_MATERIAL_RECEIVED",
+        "APPEAL_SIGNOFF_RECORDED",
+        "APPEAL_RULED",
+        "CASE_SEALED",
+        "NOTIFICATION_QUEUED",
+        "NOTIFICATION_SENT",
         "DECISION_FINALIZED"
       ]
     },
@@ -32,7 +52,10 @@
         "candidate_entry",
         "judging_assignment",
         "score_sheet",
-        "appeal_case"
+        "appeal_case",
+        "recusal_fact",
+        "stage_list",
+        "selection_case"
       ]
     },
     "aggregate_id": {
