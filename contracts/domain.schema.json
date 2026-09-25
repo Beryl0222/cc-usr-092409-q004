@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "记者选拔回避与复核领域事件",
+  "title": "记者选拔盲评封卷领域事件",
   "type": "object",
   "required": [
     "event_id",
@@ -20,19 +20,49 @@
       "type": "string",
       "enum": [
         "ENTRY_ACCEPTED",
-        "RECUSAL_DECLARED",
+        "MATERIAL_VERSION_SUBMITTED",
+        "SCALE_VERSION_REGISTERED",
+        "REVIEW_PACKET_GENERATED",
+        "REVIEWER_ASSIGNED",
+        "CONFLICT_FLAGGED",
+        "CONFLICT_CONFIRMED",
+        "CONFLICT_DISMISSED",
+        "REVIEWER_RECUSED",
+        "AFFECTED_SCORE_ISOLATED",
+        "SUPPLEMENTAL_ROUND_OPENED",
+        "RECUSAL_FACT_DECLARED",
         "SCORE_SUBMITTED",
-        "INCIDENT_CONFIRMED",
-        "DECISION_FINALIZED"
+        "SCORE_EXCLUDED",
+        "SCORE_INVESTIGATION_OPENED",
+        "SCORE_INVESTIGATION_RESOLVED",
+        "PACKET_SEALED",
+        "HOLD_PLACED",
+        "REVIEW_ADDED",
+        "CORRECTION_ISSUED",
+        "LIST_PUBLISHED",
+        "SEAL_JOB_REQUESTED",
+        "SEAL_JOB_COMPLETED",
+        "APPEAL_FILED",
+        "APPEAL_MATERIAL_ADDED",
+        "APPEAL_SIGNED",
+        "APPEAL_DECIDED",
+        "OUTBOX_ENQUEUED",
+        "OUTBOX_DELIVERED"
       ]
     },
     "aggregate_type": {
       "type": "string",
       "enum": [
         "candidate_entry",
+        "scale_version",
+        "review_packet",
         "judging_assignment",
         "score_sheet",
-        "appeal_case"
+        "recusal_fact",
+        "stage_list",
+        "seal_job",
+        "appeal_case",
+        "outbox_message"
       ]
     },
     "aggregate_id": {
@@ -50,6 +80,9 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object"
     }
   },
   "additionalProperties": true
